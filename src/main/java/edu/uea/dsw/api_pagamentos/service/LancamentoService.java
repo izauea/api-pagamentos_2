@@ -112,7 +112,6 @@ public class LancamentoService {
         return toDTO(LancamentoAtualizado);
     }
 
-    @Transactional
     public void deletarLancamento(Long codigo) {
         if (!lancamentoRepository.existsById(codigo)) {
             throw new RecursoNaoEncontradoException("Lançamento não encontrado");
